@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657975, g: 0.4964143, b: 0.57481766, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657916, g: 0.49641317, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -767,6 +767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 10
   projectilePrefab: {fileID: 1222869813713301182, guid: 2f73e601870651b458b96f78f01dca78, type: 3}
+  projectilePrefab2: {fileID: 939195560512553948, guid: 399f3026ca889334da6322647c74ebbc, type: 3}
 --- !u!1001 &1887330776
 PrefabInstance:
   m_ObjectHideFlags: 0

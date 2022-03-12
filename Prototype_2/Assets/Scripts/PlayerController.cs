@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     private float speed=20.0f;
     public float Range=10;
     public GameObject projectilePrefab;
+    public GameObject projectilePrefab2;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,19 +30,22 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(10, transform.position.y, transform.position.z);
         }
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
-        }
+        
         horizontalInput = Input.GetAxis("Horizontal");
-        if(Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Instantiate(projectilePrefab2, transform.position, projectilePrefab.transform.rotation);
+            }
             transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed*0.5f);
-        }
-        else
+        }else
         {
-
-        transform.Translate(Vector3.right*horizontalInput*Time.deltaTime*speed);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            }
+            transform.Translate(Vector3.right*horizontalInput*Time.deltaTime*speed);
         }
     }
 }
